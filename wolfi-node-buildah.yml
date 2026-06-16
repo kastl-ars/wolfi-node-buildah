@@ -11,7 +11,7 @@ contents:
     - coreutils
     - gawk
     - grep
-    - tar
+    - gnutar
     - buildah
     - nodejs-26
 
