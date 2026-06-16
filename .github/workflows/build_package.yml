@@ -36,16 +36,6 @@ jobs:
           MELANGE_KEY: ${{ secrets.MELANGE_KEY }}
         run: echo "${MELANGE_KEY}" > melange.rsa
 
-      - name: Setup melange
-        uses: chainguard-dev/actions/setup-melange@5f020827ba80ff5d64d45116542d0c733e8e7e71 # v1.6.23
-
-      - name: Build package with Melange
-        uses: chainguard-dev/actions/melange-build-pkg@5f020827ba80ff5d64d45116542d0c733e8e7e71 # v1.6.23
-        with:
-          config: apkrane-package.yml
-          archs: x86_64
-          sign-with-key: true
-
       # https://github.com/chainguard-images/actions/tree/main/apko-publish
       - name: Build image with Apko
         uses: chainguard-images/actions/apko-publish@a63bd73b7ab5cb3ae175d81ab9b72e4922af3acd # v1.0.32
