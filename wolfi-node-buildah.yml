@@ -12,6 +12,7 @@ contents:
     - gawk
     - grep
     - gnutar
+    - gzip
     - buildah
     - nodejs-26
 
