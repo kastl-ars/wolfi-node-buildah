@@ -1,6 +1,6 @@
 ---
 
-name: Build a package with Melange
+name: Build the image and push it to ghcr.io
 
 on:
   push:
@@ -16,7 +16,7 @@ env:
   IMAGE_NAME: ${{ github.repository }}
 
 jobs:
-  build-apk-image:
+  build-and-push-the-image:
     runs-on: ubuntu-latest
     environment: melange
     permissions:
