@@ -15,6 +15,7 @@ contents:
     - gzip
     - buildah<1.44
     - nodejs-26
+    - shadow-subids
 
 environment:
   PATH: /usr/sbin:/sbin:/usr/bin:/bin
