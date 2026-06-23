@@ -35,4 +35,4 @@ jobs:
         uses: chainguard-images/actions/apko-publish@a63bd73b7ab5cb3ae175d81ab9b72e4922af3acd # v1.0.32
         with:
           config: wolfi-node-buildah.yml
-          tag: ghcr.io/kastl-ars/wolfi-node-buildah:latest
+          tag: ghcr.io/kastl-ars/wolfi-node-buildah:latest ghcr.io/kastl-ars/wolfi-node-buildah:${{ GITHUB_SHA }}
