@@ -30,12 +30,6 @@ jobs:
         with:
           persist-credentials: false
 
-      - name: Create melange.rsa from Github secret
-        shell: bash
-        env:
-          MELANGE_KEY: ${{ secrets.MELANGE_KEY }}
-        run: echo "${MELANGE_KEY}" > melange.rsa
-
       # https://github.com/chainguard-images/actions/tree/main/apko-publish
       - name: Build image with Apko
         uses: chainguard-images/actions/apko-publish@a63bd73b7ab5cb3ae175d81ab9b72e4922af3acd # v1.0.32
