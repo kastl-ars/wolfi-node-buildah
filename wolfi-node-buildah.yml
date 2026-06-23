@@ -13,7 +13,7 @@ contents:
     - grep
     - gnutar
     - gzip
-    - buildah
+    - buildah<1.44
     - nodejs-26
 
 environment:
