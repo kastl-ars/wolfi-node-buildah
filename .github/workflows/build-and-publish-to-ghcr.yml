@@ -14,6 +14,8 @@ on:
     # run every Monday at 01:30
     - cron: '30 1 * * 1'
 
+permissions: {}
+
 env:
   REGISTRY: ghcr.io
   IMAGE_NAME: ${{ github.repository }}
