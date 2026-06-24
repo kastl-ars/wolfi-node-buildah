@@ -40,3 +40,12 @@ jobs:
         with:
           config: wolfi-node-buildah.yml
           tag: ghcr.io/kastl-ars/wolfi-node-buildah:latest ghcr.io/kastl-ars/wolfi-node-buildah:${{ github.sha }}
+
+      - name: Run Trivy vulnerability scanner
+        uses: aquasecurity/trivy-action@v0.36.0
+        with:
+          image-ref: ghcr.io/kastl-ars/wolfi-node-buildah:${{ github.sha }}
+          format: 'table'
+          exit-code: '1'
+          vuln-type: 'os,library'
+          severity: 'CRITICAL,HIGH'
