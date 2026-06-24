@@ -42,7 +42,7 @@ jobs:
           tag: ghcr.io/kastl-ars/wolfi-node-buildah:latest ghcr.io/kastl-ars/wolfi-node-buildah:${{ github.sha }}
 
       - name: Run Trivy vulnerability scanner
-        uses: aquasecurity/trivy-action@v0.36.0
+        uses: aquasecurity/trivy-action@ed142fd0673e97e23eac54620cfb913e5ce36c25 # v0.36.0
         with:
           image-ref: ghcr.io/kastl-ars/wolfi-node-buildah:${{ github.sha }}
           format: 'table'
